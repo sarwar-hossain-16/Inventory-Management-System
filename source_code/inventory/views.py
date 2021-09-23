@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . models import Products
+from .models import Products
 
 # Create your views here.
 def check_inv(request):
@@ -24,9 +24,9 @@ def add_prod(request):
         p=Products.objects.all()
         return render(request, "view_inv.html", {'prods':p})
     else:
-        p=Products(name=pname, price=pprod_price, quantity=pquantity)
-        p.save()
-        return render(request, "view_inv.html", {'prods':p})
+        Products.objects.create(name=pname, price=pprod_price, quantity=pquantity)
+        q=Products.objects.all()
+        return render(request, "view_inv.html", {'prods':q})
 
 def rem_inv(request):
     return render(request, "remove_inv.html")
