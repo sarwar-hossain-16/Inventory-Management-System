@@ -1,0 +1,40 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+<div class="p-3 mb-2 bg-dark text-white">
+    <body>
+        <div id="login">
+            <div class="container h-100">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="login-form" class="form" action="checkpass" method="post">
+                                {% csrf_token %}
+                                <h3 class="text-center text-dark pt-1">Login form</h3>
+                                <h3 class="text-center text-dark pt-1">Login form</h3>
+                                <h3 class="text-center text-light">LOG IN</h3>
+                                <div class="form-group">
+                                    <label for="username" class="text-light">USER ID:</label><br>
+                                    <input type="text" name="username" class="form-control">
+                                </div>
+                            
+                                <div class="form-group">
+                                    <label for="password" class="text-light">PASSWORD:</label><br>
+                                    <input type="text" name="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn btn-success btn-lg float-right" value="ENTER">
+                                </div>
+                                <h4 class="text-center text-danger pt-1">Wrong Username or Password</h4>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </body>
+</div>

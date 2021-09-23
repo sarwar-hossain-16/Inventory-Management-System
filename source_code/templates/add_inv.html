@@ -1,0 +1,46 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+<div class="p-3 mb-2 bg-dark text-white">
+    <div class="col">
+        <form action="home">
+            <br> <button type="Submit" class="btn btn-primary btn-md">Home</button><br>
+        </form>
+    </div>
+<body>
+    <div id="login">
+    
+        <div class="container h-100">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="add_prod" method="post">
+                            {% csrf_token %}
+                            <h3 class="text-center text-light">ADD PRODUCT</h3>
+                            <div class="form-group">
+                                <label for="name" class="text-light">Product Name:</label><br>
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="prod_price" class="text-light">Product Price:</label><br>
+                                <input type="text" name="prod_price" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity" class="text-light">Quantity:</label><br>
+                                <input type="text" name="quantity" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="Confirm" class="btn btn-success btn-md float-right" value="ADD PRODUCT">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</div>
